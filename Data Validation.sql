@@ -1,0 +1,5 @@
+drop schema cycle_crash cascade;
+create schema cycle_crash;
+drop table crash_data.cyclecrashfreq1;
+create table crash_data.cyclecrashfreq1(crashdate DATE,crashtime TIME,Borough varchar(100),zipcode varchar(100),Lat varchar(100),Longitude varchar(100),Loc varchar(100),onstreetname varchar(100),offstreetname varchar(100),personsinjured varchar(100),personskilled varchar(100),pedsinjured varchar(100),pedskilled varchar(100),cyclistsinjured varchar(100),cyclistskilled varchar(100),motoinjured varchar(100),motokilled varchar(100),CFV1 varchar(100),CFV2 varchar(100),CFV3 varchar(100),CFV4 varchar(100),CFV5 varchar(100),col_id varchar(100),VTC1 varchar(100),VTC2 varchar(100),VTC3 varchar(100),VTC4 varchar(100),VTC5 varchar(100),Nll Varchar(100));
+COPY crash_data.cyclecrashfreq1(crashdate,crashtime,Borough,zipcode,Lat,Longitude,Loc,onstreetname,offstreetname,personsinjured,personskilled,pedsinjured,pedskilled,cyclistsinjured,cyclistskilled,motoinjured,motokilled,CFV1,CFV2,CFV3,CFV4,CFV5,col_id,VTC1,VTC2,VTC3,VTC4,VTC5,nll) FROM '/home/deadshot/Desktop/Motor_Vehicle_Collisions_-_Crashes.csv' DELIMITER ',' CSV HEADER;
